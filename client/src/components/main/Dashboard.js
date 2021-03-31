@@ -1,9 +1,12 @@
 import React from 'react'
+import useAuth from '../../hooks/useAuth';
 
-const Dashboard = () => {
+const Dashboard = ({ code }) => {
+  const accessToken = useAuth(code)
+  
   return (
     <div>
-      Hello world. I'm the Dashboard component!
+      {code}
     </div>
   )
 }
